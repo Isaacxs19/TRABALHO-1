@@ -1,0 +1,28 @@
+function mostrarMais() {
+    var maisInfo = document.getElementById("maisInfo");
+    if (maisInfo.style.display === "none") {
+        maisInfo.style.display = "block";
+    } else {
+        maisInfo.style.display = "none";
+    }
+}
+
+// Adiciona nome da equipe
+var nomeEquipe = "Nome da Sua Equipe";
+document.getElementById("nome-equipe").textContent = nomeEquipe;
+
+// Adiciona membros da equipe dinamicamente
+var equipeLista = document.getElementById("equipe-lista");
+
+var equipeMembros = [
+    "Membro 1 - Nome",
+    "Membro 2 - Nome",
+    "Membro 3 - Nome",
+    // Adicione mais membros conforme necessário
+];
+
+for (var i = 0; i < equipeMembros.length; i++) {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(equipeMembros[i]));
+    equipeLista.appendChild(li);
+}
